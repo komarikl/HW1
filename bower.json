@@ -1,3 +1,6 @@
 {
-	"name" : "dz4"
+  "name": "dz4",
+  "dependencies": {
+    "normalize.css": "~3.0.3"
+  }
 }

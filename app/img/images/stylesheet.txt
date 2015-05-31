@@ -1,0 +1,83 @@
+.sprite {
+    background-image: url(spritesheet.png);
+    background-repeat: no-repeat;
+    display: block;
+}
+
+.sprite-avatar-man {
+    width: 150px;
+    height: 150px;
+    background-position: -15px -15px;
+}
+
+.sprite-bag {
+    width: 36px;
+    height: 34px;
+    background-position: -195px -15px;
+}
+
+.sprite-doc {
+    width: 26px;
+    height: 32px;
+    background-position: -261px -15px;
+}
+
+.sprite-dz_port2015_31 {
+    width: 20px;
+    height: 20px;
+    background-position: -261px -77px;
+}
+
+.sprite-email {
+    width: 21px;
+    height: 16px;
+    background-position: -195px -127px;
+}
+
+.sprite-face {
+    width: 47px;
+    height: 47px;
+    background-position: -246px -127px;
+}
+
+.sprite-git {
+    width: 47px;
+    height: 47px;
+    background-position: -15px -204px;
+}
+
+.sprite-hat {
+    width: 41px;
+    height: 23px;
+    background-position: -92px -204px;
+}
+
+.sprite-lock {
+    width: 20px;
+    height: 32px;
+    background-position: -163px -204px;
+}
+
+.sprite-logo {
+    width: 243px;
+    height: 42px;
+    background-position: -317px -15px;
+}
+
+.sprite-phone {
+    width: 19px;
+    height: 20px;
+    background-position: -323px -87px;
+}
+
+.sprite-tw {
+    width: 47px;
+    height: 47px;
+    background-position: -372px -87px;
+}
+
+.sprite-vk {
+    width: 47px;
+    height: 47px;
+    background-position: -449px -87px;
+}

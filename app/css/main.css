@@ -16,6 +16,16 @@ body {
 	background-color: transparent;
 	border: 0;
 }
+.clearfix:before, .clearfix:after {
+   content: "";
+   display: table;
+}
+
+.clearfix:after {
+   visibility: hidden;
+   height: 0;
+   clear: both;
+}
 
 /* прибьём футер к низу   */
 .wrapper{
@@ -32,7 +42,7 @@ body {
 }
 .page-footer{
 	height: 80px;
-	margin-top: 0px;	
+	margin-top: -80px;	
 }
 /* прибьём футер к низу - конец*/
 
@@ -50,19 +60,19 @@ body {
   height: 119px;
   background: #eff3f7 url(../img/line.png) bottom center no-repeat;
   position: relative;
-  margin-bottom: 39px;
+  margin-bottom: 38px;
 }
 .page-header .header-logo-link{
 	position: absolute;
-	top: 39px;
-	left: 0;
+	top: 37px;
+	left: -1;
 	text-decoration: none;
 }
 
 .page-header .socials{
 	position: absolute;
 	right: 0;
-	top: 36px;	
+	top: 34px;	
 }
 
 
@@ -79,7 +89,7 @@ body {
   display: inline-block;
   height: 47px;
   width: 47px;
-  margin-left: 19px;
+  margin-left: 20px;
  
 }
 .socials .socials-item:first-child {
@@ -116,7 +126,7 @@ body {
 .nav{
 	background: #eff3f7;
 	border-radius: 4px;
-	margin-bottom: 26px;
+	margin-bottom: 25px;
 	overflow: hidden;
 }
 .nav .nav-list {
@@ -141,16 +151,17 @@ body {
 
 .nav .nav-item.active .nav-link{
 	color:#ffffff;
+	font-size: 23px;
 }
 
 .nav .nav-link{
 	display: block;
 	font-family: 'fira_sansbook';
-	font-size: 20px;
+	font-size: 21px;
 	text-decoration: none;
 	color: #959aa8;
 	margin-left:17px;
-	padding: 20px 0px;
+	padding: 21px 0px 16px 0px;
 }
 .nav .nav-link:hover{
 	color: #3ba8c0;
@@ -160,7 +171,7 @@ body {
 .contacts{
 	font-style: normal;
 	font-family: 'fira_sansbook';
-	font-size: 20px;
+	font-size: 21px;
 	background: #3ba8c0;
 	overflow: hidden;
 	border-radius: 4px;
@@ -185,7 +196,7 @@ body {
 .contacts .contacts-link{
 	display: block;	
 	text-decoration: none;
-	padding: 6px 0 6px 82px;
+	padding: 2px 0 5px 82px;
 }
 .contacts .contact-text{
 	line-height: 1.3;
@@ -228,8 +239,8 @@ body {
 }
 
 
-.info-body, .work-body, .education-body{
-	margin:23px 0px 50px 55px;
+.info-body{
+	margin:19px 0px 60px 53px;
 }
 
 .info-header, .work-header, .education-header{
@@ -239,7 +250,7 @@ body {
 	font-weight: 400;
 	font-size: 27px;
 	color:#3ba8c0;
-	padding: 11px 24px;
+	padding: 12px 21px;
 	margin: 0px;
 	border-bottom: 2px solid #3ba8c0;
 
@@ -252,12 +263,12 @@ body {
 /*Аватар*/
 .info-avatar-wrapper{
 	display: inline-block;
-	margin-top: 12px;
+	margin-top: 15px;
 }
 
 .info-avatar-wrapper .avatar {
-	width:150px;
-	height: 150px;
+	width:140px;
+	height: 140px;
 	border-radius: 50%;
 	border:5px solid #3ba8c0;
 	overflow: hidden;
@@ -270,6 +281,7 @@ body {
 
 /*Контент блока "Общая информация"*/
 .info-content-wrapper{
+	font-size: 15px;
 	display: inline-block;
 	width: 420px;
 	float: right;
@@ -281,37 +293,43 @@ body {
 }
 
 .info-content-wrapper .info-content-list .info-content-item{
-	margin-bottom: 7px;
+	margin-bottom: 6px;
 }
 
 .info-content-wrapper .info-content-list .info-content-name{
 	display: inline-block;
-	font-size: 1.1em;
+	font-size: 17px;
 	font-weight: 700;
 }
 
 .info-content-wrapper .info-content-list .info-content-data{
 	display: inline-block;
-	margin-left: 16px;
+	margin-left: 13px;
 }
 
 .skills-list{
-	float:right;
-	max-width: 190px;
-	padding-right: 32px;
+	float: right;
+	max-width: 200px;
+	padding-left: 10px;
+	margin: 5px 48px 0px 0px;
 }
+
 .skills-list .skill-item{
 	display: inline-block;
-	background: linear-gradient(#3ba8c0 0,#3ba8c0 50%,#2e8ca2 50%,#2e8ca2 100%);
+	background-color: #3ba8c0;
+	background: -webkit-linear-gradient(#3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+	background: -o-linear-gradient(#3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
+	background: -moz-linear-gradient(#3ba8c0 0%, #3ba8c0 50%, #2e8ca2 50%, #2e8ca2 100%);
 	color:#ffffff;
 	border-radius: 2px;
 	font-family: 'proxima_nova_condensedSBd';
 	font-size: 0.8em;
-	padding: 2px 13px;
-	margin: 0px 5px 5px 0px;
+	padding: 2px 15px;
+	margin: 0px 5px 5px -1px;
 }
 
 /*Общие для работы и образования*/
+
 .work-item-name, .education-item-name {
   font-family: fira_sansbook;
   font-size: 17px;
@@ -321,30 +339,37 @@ body {
 
 .work-item-data, .education-item-data {
   font-family: fira_sanslight;
-  font-size: 15px;
-  line-height: 15px;
+  font-size: 16px;
+  line-height: 16px;
   color: #4a545d;
 }
 
 /*Опыт работы*/
+.work-body {
+  margin: 19px 0px 44px 58px;
+}
+
 .work-body .work-list{
 	margin: 0;
 	padding:0;
 }
 .work-list .work-item {
-  padding-left: 76px;
+  padding-left: 68px;
   background-image: url(../img/bag.png);
   background-repeat: no-repeat;
-  margin-bottom: 26px;
+  margin: 26px 0px;
 }
 
 /*Образование*/
+.education-body {
+  margin: 26px 0px 60px 55px;
+}
 .education-body .education-list{
 	margin: 0;
 	padding:0;
 }
 .education-list .education-item {
-  padding-left: 76px;
+  padding-left: 70px;
   background-repeat: no-repeat;
   margin-bottom: 26px;
 }
@@ -379,7 +404,7 @@ body {
 .page-footer .lock{
 	position: absolute;
 	top: 26px;
-	left: 20px;	
+	left: 43px;	
 }
 .lock .lock-inner {
 	display: block;

@@ -1,12 +1,14 @@
 /*Стили, применяемые во всем документе*/
 html {
 	height: 100%;	
+	overflow-y: scroll;
 }
 body {
 	height: 100%;
 	background: url(../img/bg.png) repeat;
 	font: normal 1em 'fira_sansbook';
 	color: #4a545d;
+	margin:0px;
 }
 
 .text-hide{
@@ -240,7 +242,7 @@ body {
 
 
 .info-body{
-	margin:19px 0px 60px 53px;
+	margin:19px 0px 60px 0px;
 }
 
 .info-header, .work-header, .education-header{
@@ -264,6 +266,7 @@ body {
 .info-avatar-wrapper{
 	display: inline-block;
 	margin-top: 15px;
+	margin-left: 53px;
 }
 
 .info-avatar-wrapper .avatar {

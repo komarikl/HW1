@@ -1,0 +1,129 @@
+.works-wrapper{
+	margin: 9px 20px 0px 18px;
+}
+.works-wrapper .works-list{
+	padding: 0;
+	margin: 0 0 0 -23px;
+}
+.works-list .works-item{
+	display: inline-block;
+	margin-bottom: 38px;
+	margin-left: 25px;
+	width: 183px;
+	text-align: center;
+	position: relative;
+	vertical-align: top;
+}
+.works-item .picture-wrapper{
+	width: 100%;
+	height: 129px;
+	border-radius: 4px;	
+	margin-bottom: 3px;
+}
+.works-item .picture{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	border: 2px solid #3ba8c0;
+	border-radius: 4px;
+}
+
+.hover-wrapper .hover-link{
+	text-decoration: none;
+}
+.work-ad{
+	line-height: 19px;
+	margin-top: 5px;
+	margin-bottom: 4px;
+}
+.works-item:hover .picture{
+	-moz-opacity: 0.20;
+	opacity:.20;
+	filter: alpha(opacity=20);
+}
+.works-item:hover .picture-wrapper{
+	background-color: rgb( 1, 108, 164);
+}
+.works-item .hover-wrapper{
+	position:absolute;
+	width: 100%;
+	top: 55px;
+	text-align: center;
+	transform: scale(0);
+	-webkit-transform: scale(0);
+	transition: all 0.5s ease-in-out;
+	-webkit-transition: all 0.5s ease-in-out;
+}
+.works-item .hover-link {
+	font-family: 'fira_sansbook';
+	font-size: 12px;
+	border: solid 3px #eff3f7;
+	color: #eff3f7;
+	text-decoration: none;
+	border-radius: 5px;	
+	padding: 0 4px;
+}
+.works-item:hover .hover-wrapper {	
+	transform: scale(1);
+	-webkit-transform: scale(1);
+}
+.works-item .work-link{
+	color: #3ba8c0;
+	font-family: 'fira_sanslight_italic';
+	font-size: 13px;
+	text-decoration: none;
+}
+.works-item .work-ad{
+	font-size: 15px;
+	margin: 5px 0;
+	line-height: 1.2;
+}
+
+/* Старый ei (для него пишем другую анимацию)*/
+.lt-ie9 .menu ul li{
+	border-bottom: none;
+}
+.lt-ie9 .menu ul li.current{
+	margin-top: 0;
+}
+.lt-ie9 .my-work .item .hover-wrapper{
+	display: none;
+}
+.lt-ie9 .my-work .item:hover .hover-wrapper {	
+	display: block;
+}
+/* // Старый ei */
+
+
+
+/* Добавить проект*/
+.add-new-item{	
+	border: dashed 1px #3ba8c0;
+	border-radius: 4px;
+	height: 128px;
+	text-decoration: none;
+}
+.add-new-item .add-new-link{
+	background: url('../img/add-new.png') center 33px no-repeat; 
+	display: block;
+	height: 100%;
+	text-decoration: none;
+	color: #3ba8c0;
+	font-size: 13px;
+}
+.add-new-item .add-new-text{
+	position: absolute;
+	padding-top: 76px;
+	text-align: center;
+	width: 100%;
+}
+.add-new-item .add-new-link:hover{
+	text-decoration: underline;
+}
+
+
+#new-progect-popup {
+  display: none;
+}

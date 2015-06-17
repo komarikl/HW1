@@ -1,0 +1,156 @@
+<!doctype html>
+<html class="no-js" lang="ru-RU">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Ильина Лада|Связаться со мной</title>
+        <meta name="description" content="Сайт-портфолио Ильиной Лады">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- CSS -->
+        <link rel="stylesheet" href="bower/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/contact.css">
+        <link rel="stylesheet" href="css/forms.css">
+        <!--<link rel="stylesheet" href="css/forms.css"> -->
+        <!-- Шрифты -->
+        <link rel="stylesheet" href="fonts/fira/fira.css">
+        <link rel="stylesheet" href="fonts/proximanova/proximanovacond-semibold.css">
+        <!-- modernizer -->
+        <script src="js/modernizr-2.8.3.min.js"></script>
+    </head>
+    <body>
+        <!--[if lte IE 8]>
+                <p class="browserupgrade">Вы испотзуете <strong>устаревший</strong> browser. Пожалуйста, <a href="http://browsehappy.com/">обновите Ваш браузер</a>.</p>
+
+                <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <div class="wrapper">
+        <!-- Шапка -->
+        <header class="page-header">
+                <div class="header-container">
+                    <a href="/" class="header-logo-link">    
+                        <img src="img/logo.png" alt="logo" class="logo-img">
+                        <span class="header-logo-text text-hide">Сайт портфолио</span>
+                    </a>
+                    <ul class="socials">
+                        <li class="socials-item">
+                            <a href="https://vk.com/ladakomarova" target="_blank" class="socials-link vk">Вконтакте</a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="#" target="_blank" class="socials-link tw">Twitter</a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="https://www.facebook.com/ladyxa" target="_blank" class="socials-link fb">Facebook</a>
+                        </li>
+                        <li class="socials-item">
+                            <a href="https://github.com/komarikl/" target="_blank" class="socials-link gt">Github</a>
+                        </li>
+                    </ul>
+                </div>
+        </header>
+       <!-- /Шапка -->
+
+       <!-- Тело -->
+       <main class="container clearfix">
+                <!-- Сайдбар-->
+            <aside class="sidebar">
+                   <nav class="nav">
+                        <ul class="nav-list">
+                            <li class="nav-item"><a href="index.html" class="nav-link">Обо мне</a></li>
+                            <li class="nav-item"><a href="portfolio.html" class="nav-link">Мои работы</a></li>
+                            <li class="nav-item active"><a href="contact.html" class="nav-link">Связаться со мной</a></li>
+                        </ul>
+                   </nav>
+               
+
+                <!-- Контакты-->
+                <address class="contacts">
+                    <div class="contacts-header">
+                        <span>Контакты</span>
+                    </div>
+                    <ul class="contacts-list">
+                        <li class="contacts-item contacts-item-mail">
+                            <a href="mailto:ladyxa@yandex.ru" class="contacts-link"><span class="contact-text">ladyxa@yandex.ru</span></a>
+                        </li>
+                        <li class="contacts-item contacts-item-phone">
+                            <a href="tel:+79307809610" class="contacts-link"><span class="contact-text">+79307809610</span></a>
+                        </li>
+                        <li class="contacts-item contacts-item-skype">
+                            <a href="skype:komarikl." class="contacts-link"><span class="contact-text">komarikl.</span></a>
+                        </li>
+                    </ul>
+                </address>
+                <!-- /Контакты-->
+            </aside>
+            <!-- /Сайдбар-->
+
+                <!-- Изменяемый контент-->
+                <div class="variable">
+                    <section class="info-box">
+                        <div class="contact-header">
+                          <h2 class="contact-header-title">У вас интересный проект? Напишите мне</h2>
+                        </div>
+                        <div class="info-body">                       
+                        <div class="contact-form-wrap">
+                            <form id="contact-me" class="form contact-form">   
+                              <!-- Вывод сообщений с сервера -->
+                              <div class="server-mes error-mes"></div>
+                              <div class="server-mes success-mes"></div>
+                              <!-- Имя и email в одну строку, для этого обернем в div.form-line -->
+                              <div class="form-line clearfix">
+                                <!-- Имя -->
+                                <div class="form-group pull-left">
+                                  <label for="name" class="label">Имя</label>
+                                  <input type="text" name="name" class="input" id="name" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя">
+                                </div>
+                                <!-- Email -->
+                                <div class="form-group pull-right">
+                                  <label for="email" class="label">Email</label>
+                                  <input type="email" name="email" class="input" id="email" placeholder="Куда мне писать" qtip-position="right" qtip-content="Вы не ввели email">
+                                </div>
+                              </div>
+                              <!-- Сообщение -->
+                              <div class="form-group">
+                                <label for="message" class="label">Сообщение</label>
+                                <textarea name="message" id="message" class="textarea" rows="3" placeholder="Кратко в чем суть" qtip-content="Что вы от меня хотите?"></textarea>
+                              </div>
+                              <!-- Капча -->
+                              <div class="form-group captcha-wrap clearfix">
+                                <label for="captcha" class="label">Введите код, указанный на картинке</label>
+                                <img src="img/bg_captcha.jpg" alt="код" class="captcha pull-left"/>
+                                <input type="text" name="captcha" class="input input-captcha pull-right" id="captcha" placeholder="Введите код" qtip-position="right" qtip-content="Вы не ввели код">
+                              </div>
+                              <!-- Кнопка "Отправить" -->
+                              <div class="button-group">
+                                <button type="submit" class="btn">Отправить</button>
+                                <button type="reset" class="btn btn-res">Очистить</button>
+                              </div>      
+                            </form>
+                          </div>
+                      </div>
+                    </section>
+                </div>
+                <!-- /Изменяемый контент-->
+        </main>
+        <!-- Тело -->
+        </div>
+        <!-- Футер -->
+        <footer class="page-footer">
+            <div class="footer-wrapper">
+                <div class="lock">
+                    <a href="log_in.html" class="lock-inner">Войти</a>
+                </div>
+                <div class="footer-content">© 2015. Это мой сайт, пожалуйста, не копируйте и не воруйте его</div>
+            </div>
+        </footer>
+        <!-- /Футер -->
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src="js/plugin.js"></script>
+        <script src="js/main.js"></script>
+
+        
+    </body>
+</html>

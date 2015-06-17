@@ -1,0 +1,49 @@
+.contact-header{
+	background: #48cbe8;
+	padding: 20px 0px 15px 0px;
+	border-bottom: 17px solid #67dffa;
+	border-radius: 4px 4px 0 0;
+	text-align: center;
+	margin-bottom: 0px;
+}
+.contact-header-title{
+	font-family: 'fira_sansbook';
+	font-weight: normal;
+	font-size: 27px;
+	color: #ffffff;
+	border: none;
+}
+.contact-form-wrap{
+	width: 402px;
+	margin: 0 auto;
+}
+.contact-form .textarea{
+	height: 182px;
+}
+.contact-form .form-line .form-group{
+	width: 48%;
+}
+.contact-form .captcha{
+	width: 48%;
+}
+.contact-form .captcha-wrap{
+	margin: 0 auto 31px;	
+}
+.contact-form .input-captcha{
+	height: 32px;
+  width: 48%;
+  margin-top: 21px;
+  padding: 6px 12px;
+}
+.contact-form .button-group button[type="reset"]{
+	float: right;
+}
+.contact-form .captcha-wrap .label{
+	font-size: 16px;
+}
+.pull-left{
+	float:left !important;
+}
+.pull-right{
+	float:right !important;
+}

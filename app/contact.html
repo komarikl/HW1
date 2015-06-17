@@ -117,9 +117,8 @@
                               </div>
                               <!-- Капча -->
                               <div class="form-group captcha-wrap clearfix">
-                                <label for="captcha" class="label">Введите код, указанный на картинке</label>
-                                <img src="img/bg_captcha.jpg" alt="код" class="captcha pull-left"/>
-                                <input type="text" name="captcha" class="input input-captcha pull-right" id="captcha" placeholder="Введите код" qtip-position="right" qtip-content="Вы не ввели код">
+                                <label for="captcha" class="label">Пройдите проверку</label>
+                                <div class="g-recaptcha" data-sitekey="6LdpgQgTAAAAAL2b6u8uoPUV05kAjd94zdQtII2K"></div>
                               </div>
                               <!-- Кнопка "Отправить" -->
                               <div class="button-group">
@@ -148,6 +147,7 @@
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+        <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="js/plugin.js"></script>
         <script src="js/main.js"></script>
 

@@ -1,14 +1,6 @@
 $(document).ready(function(){
-	 $('#add-new-item').on('click touchstart', function(e) {
-	       e.preventDefault();
-	       $('#new-progect-popup').bPopup({
-	       	modalColor: '#3ba8c0',
-	       	speed: 500,
-	       	transition: 'slideDown'
-	       });
-	    });
 
-	 $('#add-project').on('submit', function(e){
+	$('#contact-me').on('submit', function(e){
 		e.preventDefault();
 
 		var
@@ -30,7 +22,6 @@ $(document).ready(function(){
 	});
 	
 });
-
 
 function postFormData(form, successCallback) {
 	var
@@ -61,14 +52,12 @@ function postFormData(form, successCallback) {
 function validateThis(form) {
 
 	var
+		textType = form.find("[data-validation='text']"),
+		mailType = form.find("[data-validation='mail']"),
 		nameType = form.find("[data-validation='name']"),
-		pictType = form.find("[data-validation='picture']"),
-		urlType = form.find("[data-validation='URL']"),
-		descType = form.find("[data-validation='description']"),
-		
 		isValid = false;
 
-	descType.each(function(){
+	textType.each(function(){
 
 		var
 			$this = $(this),
@@ -78,41 +67,27 @@ function validateThis(form) {
 			isValid = true;
 		} else {
 			$this.tooltip({
-				content : 'описание проекта'
+				position : 'left',
+				content : 'Что вы от меня хотите'
 			});
 
 			isValid = false;
 		}
 	});
 
-	urlType.each(function(){
+	mailType.each(function(){
 		var
 			$this = $(this),
-			notEmptyField = !!$this.val();
+			regExp = /^([a-zA-Z0-9_.-])+@([a-zA-Z0-9_.-])+\.([a-zA-Z])+([a-zA-Z])+/,
+			isMail = regExp.test($this.val());
 
-		if (notEmptyField) {
+		if (isMail) {
 			isValid = true;
 		} else {
 			$this.tooltip({
-				content : 'ссылка на проект'
+				position : 'right',
+				content : 'Вы ввели неверный email'
 			});
-
-			isValid = false;
-		}
-	});
-
-	pictType.each(function(){
-		var
-			$this = $(this),
-			notEmptyField = !!$this.val();
-
-		if (notEmptyField) {
-			isValid = true;
-		} else {
-			$this.tooltip({
-				content : 'изображение'
-			});
-
 			isValid = false;
 		}
 	});
@@ -128,7 +103,7 @@ function validateThis(form) {
 		} else {
 			$this.tooltip({
 				position : 'left',
-				content : 'введите название'
+				content : 'Вы не ввели имя'
 			});
 
 			isValid = false;
@@ -142,8 +117,8 @@ function validateThis(form) {
 $.fn.tooltip = function(options) {
 
 	options = {
-		position    : options.position || 'left',
-		content     : options.content || 'Заполните поле'
+		position    : options.position || 'right',
+		content     : options.content || 'I am tooltip'
 	};
 
 	var

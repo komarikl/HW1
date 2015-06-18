@@ -1,0 +1,5 @@
+$_FILES['filename']['name']
+$_FILES['filename']['type']
+$_FILES['filename']['size']
+$_FILES['filename']['tmp_name']
+$_FILES['filename']['error']

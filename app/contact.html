@@ -93,7 +93,7 @@
                         </div>
                         <div class="info-body">                       
                         <div class="contact-form-wrap">
-                            <form id="contact-me" class="form contact-form">   
+                            <form id="contact-me" class="form contact-form" action="mail.php">   
                               <!-- Вывод сообщений с сервера -->
                               <div class="server-mes error-mes"></div>
                               <div class="server-mes success-mes"></div>
@@ -102,18 +102,18 @@
                                 <!-- Имя -->
                                 <div class="form-group pull-left">
                                   <label for="name" class="label">Имя</label>
-                                  <input type="text" name="name" class="input" id="name" placeholder="Как к вам обращаться" qtip-content="Вы не ввели имя">
+                                  <input type="text" name="name" class="input add-tooltip-name" id="name" placeholder="Как к вам обращаться" data-validation="name">
                                 </div>
                                 <!-- Email -->
                                 <div class="form-group pull-right">
                                   <label for="email" class="label">Email</label>
-                                  <input type="email" name="email" class="input" id="email" placeholder="Куда мне писать" qtip-position="right" qtip-content="Вы не ввели email">
+                                  <input type="text" name="email" class="input add-tooltip-email" id="email" placeholder="Куда мне писать" data-validation="mail">
                                 </div>
                               </div>
                               <!-- Сообщение -->
                               <div class="form-group">
                                 <label for="message" class="label">Сообщение</label>
-                                <textarea name="message" id="message" class="textarea" rows="3" placeholder="Кратко в чем суть" qtip-content="Что вы от меня хотите?"></textarea>
+                                <textarea name="message" id="message" class="textarea add-tooltip-text" rows="3" placeholder="Кратко в чем суть" data-validation="text"></textarea>
                               </div>
                               <!-- Капча -->
                               <div class="form-group captcha-wrap clearfix">
@@ -129,6 +129,27 @@
                           </div>
                       </div>
                     </section>
+                    <!--Тултипы-->
+                    <div class="tooltip tooltip_top">
+                        <div class="tooltip__inner">
+                            Содержание тултипа
+                        </div>
+                    </div>
+                    <div class="tooltip tooltip_right">
+                        <div class="tooltip__inner">
+                            Содержание тултипа
+                        </div>
+                    </div>
+                    <div class="tooltip tooltip_bottom">
+                        <div class="tooltip__inner">
+                            Содержание тултипа
+                        </div>
+                    </div>
+                    <div class="tooltip tooltip_left">
+                        <div class="tooltip__inner">
+                            Содержание тултипа
+                        </div>
+                    </div>
                 </div>
                 <!-- /Изменяемый контент-->
         </main>
@@ -150,7 +171,8 @@
         <script src='https://www.google.com/recaptcha/api.js'></script>
         <script src="js/plugin.js"></script>
         <script src="js/main.js"></script>
-
+        <script src="js/contact.js"></script>
+        <script src="bower/placeholder/jquery.placeholder.js"></script>
         
     </body>
 </html>

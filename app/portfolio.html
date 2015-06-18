@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Ильина Лада</title>
+        <title>Ильина Лада|Мои работы</title>
         <meta name="description" content="Сайт-портфолио Ильиной Лады">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
@@ -183,14 +183,14 @@
           <h4 class="modal-title">Добавление проекта</h4>
         </div>
         <div class="modal-body">
-          <form id="add-new-project" action="uploadfile.php" enctype="multipart/form-data" method="post" class="form" role="form">  
+          <form id="add-new-project" action="" enctype="multipart/form-data" method="post" class="form" role="form">  
           <!-- Вывод сообщений с сервера -->
           <div class="server-mes error-mes"></div>
           <div class="server-mes success-mes"></div>
           <!-- Название проекта -->
           <div class="form-group">
             <label for="projectName" class="label">Название проекта</label>
-            <input type="text" name="projectName" class="input" id="projectName" placeholder="Введите название" qtip-content="Вы не ввели название">
+            <input type="text" name="projectName" class="input" id="projectName" placeholder="Введите название" data-validation="name">
           </div>      
           <!-- Картинка проекта -->
           <div class="form-group">
@@ -200,26 +200,49 @@
               <input id="fileupload" class="fileupload" type="file" name="files[]">
               <input id="fileurl" type="hidden" name="fileurl">
             </label>
-            <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled qtip-content="Вы не выбрали изображение">
+            <input id="filename" type="text" class="input" name="filename" placeholder="Загрузите изображение" disabled data-validation="picture">
             </div>
           </div>
           <!-- URL проекта -->
           <div class="form-group">
             <label for="projectUrl" class="label">URL проекта</label>
-            <input type="text" name="projectUrl" class="input" id="projectUrl" placeholder="Добавьте ссылку" qtip-content="Вы не добавили ссылку">
+            <input type="text" name="projectUrl" class="input" id="projectUrl" placeholder="Добавьте ссылку" data-validation="URL">
           </div>
           <!-- Описание -->
           <div class="form-group">
             <label for="projectDesc" class="label">Описание</label>
-            <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте" qtip-content="Описание проекта обязательно"></textarea>
+            <textarea name="text" id="projectDesc" class="textarea" rows="3" placeholder="Пара слов о вашем проекте" data-validation="description"></textarea>
           </div>
           <!-- Кнопка "Отправить" -->
             <div class="btn-wrapp">
-              <button type="submit" class="btn">Добавить</button>
+              <button type="submit" class="btn" id="add-project">Добавить</button>
             </div>      
           </form>
         </div>
       </div>
+
+      <!--Тултипы-->
+                          <div class="tooltip tooltip_top">
+                              <div class="tooltip__inner">
+                                  Содержание тултипа
+                              </div>
+                          </div>
+                          <div class="tooltip tooltip_right">
+                              <div class="tooltip__inner">
+                                  Содержание тултипа
+                              </div>
+                          </div>
+                          <div class="tooltip tooltip_bottom">
+                              <div class="tooltip__inner">
+                                  Содержание тултипа
+                              </div>
+                          </div>
+                          <div class="tooltip tooltip_left">
+                              <div class="tooltip__inner">
+                                  Содержание тултипа
+                              </div>
+                          </div>
+
     </div>
     <!-- / МОДАЛЬНОЕ ОКНО -->
     <!-- / Добавить новый проект --> 
@@ -242,6 +265,7 @@
         <script src="js/main.js"></script>
         <script src="bower/bpopup/jquery.bpopup.js"></script>
         <script src="js/addwork.js"></script>
+        <script src="bower/placeholder/jquery.placeholder.js"></script>
         
     </body>
 </html>

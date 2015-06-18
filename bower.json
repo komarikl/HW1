@@ -2,6 +2,7 @@
   "name": "dz4",
   "dependencies": {
     "normalize.css": "~3.0.3",
-    "bpopup": "~0.11.0"
+    "bpopup": "~0.11.0",
+    "jquery.placeholder.js": "~0.1.0"
   }
 }

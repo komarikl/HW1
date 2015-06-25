@@ -1,0 +1,4 @@
+# Установка кодировки для проекта
+AddDefaultCharset UTF-8
+
+AddType application/x-httpd-php5 .php .htm .html .phtml

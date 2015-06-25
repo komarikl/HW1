@@ -1,0 +1,16 @@
+{
+    "name": "test/app",
+    "authors": [
+        {
+            "name": "komarikl",
+            "email": "ladyxa@yandex.ru"
+        }
+    ],
+    "require": {
+    	"phpmailer/phpmailer":"5.2.10"
+    	
+    },
+    "config":{
+    	"vendor-dir":"phplibs"
+    }
+}

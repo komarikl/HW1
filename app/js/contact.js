@@ -30,7 +30,7 @@ function postFormData(form, successCallback) {
 		dataObject  = {};
 
 	if (!host) {
-		console.log('set action attribute to your form, you fool!!');
+		console.log('set action attribute to your form!');
 	}
 
 	reqFields.each(function(){
@@ -38,7 +38,7 @@ function postFormData(form, successCallback) {
 			$this = $(this),
 			value = $this.val(),
 			name  = $this.attr('name');
-
+			
 		dataObject[name] = value;
 	});
 
@@ -70,6 +70,7 @@ function validateThis(form) {
 				position : 'left',
 				content : 'Что вы от меня хотите'
 			});
+			$this.addClass("incorrect");
 
 			isValid = false;
 		}
@@ -88,6 +89,7 @@ function validateThis(form) {
 				position : 'right',
 				content : 'Вы ввели неверный email'
 			});
+			$this.addClass("incorrect");
 			isValid = false;
 		}
 	});
@@ -105,6 +107,7 @@ function validateThis(form) {
 				position : 'left',
 				content : 'Вы не ввели имя'
 			});
+			$this.addClass("incorrect");
 
 			isValid = false;
 		}
@@ -118,7 +121,7 @@ $.fn.tooltip = function(options) {
 
 	options = {
 		position    : options.position || 'right',
-		content     : options.content || 'I am tooltip'
+		content     : options.content || 'Заполните поле'
 	};
 
 	var
@@ -139,10 +142,14 @@ $.fn.tooltip = function(options) {
 	_positionIt($this, body.find('.tooltip').last(), options.position);
 
 
-	$(document).on('click', function(){
+	
+	
+	$('input,textarea').on('click', function(){
+		$(this).removeClass('incorrect');
 		$('.tooltip').remove();
-	});
 
+	});
+	
 	$(window).on('resize', function(){
 
 		var

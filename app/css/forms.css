@@ -92,6 +92,10 @@ input, textarea, button {
 	border-color: #49bb7b;
 	color: #49bb7b;
 }
+.incorrect{
+	background-color: #fad2d1 !important;
+	border-color: #f97e76 !important;
+}
 /* placeholder */
 *::-webkit-input-placeholder {
     color: #48cbe8;
@@ -167,4 +171,5 @@ input, textarea, button {
 	color: #ffffff;
 	font-size: 13px;
 }
+
 /* _____________ // тултипы _________ */

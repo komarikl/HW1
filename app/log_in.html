@@ -37,19 +37,19 @@
                         <h2 class="modal-title">Авторизируйтесь</h2>
                     </div>
                     <div class="modal-body">
-                        <form id="login" class="form" role="form">   
+                        <form id="login" class="form" role="form" action="login.php">   
                             <!-- Вывод сообщений с сервера -->
                             <div class="server-mes error-mes"></div>
                             <div class="server-mes success-mes"></div>
                             <!-- Логин -->
                             <div class="form-group">
                                 <label for="login" class="label">Логин</label>
-                                <input type="text" name="login" class="input" id="name" placeholder="Введите логин" qtip-content="Вы не ввели логин">
+                                <input type="text" name="login" class="input" id="name" placeholder="Введите логин" data-validation="login">
                             </div>
                             <!-- Пароль -->
                             <div class="form-group">
                                 <label for="password" class="label">Пароль</label>
-                                <input type="password" name="password" class="input" id="password" placeholder="Введите пароль" qtip-content="Вы не ввели пароль">
+                                <input type="password" name="password" class="input" id="password" placeholder="Введите пароль" data-validation="pass">
                             </div>
                             <!-- Кнопка "Войти" -->
                             <button type="submit" class="btn">Войти</button>    
@@ -75,6 +75,7 @@
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
         <script src="js/plugin.js"></script>
         <script src="js/main.js"></script>
+        <script src="js/login.js"></script>
         <script src="bower/placeholder/jquery.placeholder.js"></script>
         
     </body>

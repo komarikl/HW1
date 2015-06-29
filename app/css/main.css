@@ -50,9 +50,11 @@ body {
 
 /* Тултипы */
 .tooltip{
-	display: inline-block;
+	/*display: inline-block;*/
 	position: absolute;
-	opacity: 0;
+	display:none;
+	/*opacity: 0;*/
+	z-index: 9999;
   -webkit-transition: opacity .3s;
   -moz-transition: opacity .3s;
   -ms-transition: opacity .3s;

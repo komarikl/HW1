@@ -2,10 +2,8 @@
 
 header('Content-Type: application/json');
 
-$name = $_POST['name'];
-$mail = $_POST['mail'];
-$text = $_POST['text'];
-
+$name = $_POST['login'];
+$mail = $_POST['pass'];
 //действия с данными
 
 sleep(1);

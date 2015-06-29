@@ -1,14 +1,6 @@
 $(document).ready(function(){
-	 $('#add-new-item').on('click touchstart', function(e) {
-	       e.preventDefault();
-	       $('#new-progect-popup').bPopup({
-	       	modalColor: '#3ba8c0',
-	       	speed: 500,
-	       	transition: 'slideDown'
-	       });
-	    });
 
-	 $('#add-new-project').on('submit', function(e){
+	$('#login').on('submit', function(e){
 		e.preventDefault();
 
 		var
@@ -31,7 +23,6 @@ $(document).ready(function(){
 	
 });
 
-
 function postFormData(form, successCallback) {
 	var
 		host        = form.attr('action'),
@@ -39,7 +30,7 @@ function postFormData(form, successCallback) {
 		dataObject  = {};
 
 	if (!host) {
-		console.log('set action attribute to your form, you fool!!');
+		console.log('set action attribute to your form!');
 	}
 
 	reqFields.each(function(){
@@ -47,7 +38,7 @@ function postFormData(form, successCallback) {
 			$this = $(this),
 			value = $this.val(),
 			name  = $this.attr('name');
-
+			
 		dataObject[name] = value;
 	});
 
@@ -61,63 +52,11 @@ function postFormData(form, successCallback) {
 function validateThis(form) {
 
 	var
-		nameType = form.find("[data-validation='name']"),
-		pictType = form.find("[data-validation='picture']"),
-		urlType = form.find("[data-validation='URL']"),
-		descType = form.find("[data-validation='description']"),
-		
+		loginType = form.find("[data-validation='login']"),
+		passType = form.find("[data-validation='pass']"),
 		isValid = false;
 
-	descType.each(function(){
-
-		var
-			$this = $(this),
-			notEmptyField = !!$this.val();
-
-		if (notEmptyField) {
-			isValid = true;
-		} else {
-			$this.tooltip({
-				content : 'описание проекта'
-			});
-			$this.addClass("incorrect");
-			isValid = false;
-		}
-	});
-
-	urlType.each(function(){
-		var
-			$this = $(this),
-			notEmptyField = !!$this.val();
-
-		if (notEmptyField) {
-			isValid = true;
-		} else {
-			$this.tooltip({
-				content : 'ссылка на проект'
-			});
-			$this.addClass("incorrect");
-			isValid = false;
-		}
-	});
-
-	pictType.each(function(){
-		var
-			$this = $(this),
-			notEmptyField = !!$this.val();
-
-		if (notEmptyField) {
-			isValid = true;
-		} else {
-			$this.tooltip({
-				content : 'изображение'
-			});
-			$this.addClass("incorrect");
-			isValid = false;
-		}
-	});
-
-	nameType.each(function(){
+	loginType.each(function(){
 
 		var
 			$this = $(this),
@@ -128,9 +67,29 @@ function validateThis(form) {
 		} else {
 			$this.tooltip({
 				position : 'left',
-				content : 'введите название'
+				content : 'Введите логин'
 			});
 			$this.addClass("incorrect");
+
+			isValid = false;
+		}
+	});
+
+	passType.each(function(){
+
+		var
+			$this = $(this),
+			notEmptyField = !!$this.val();
+
+		if (notEmptyField) {
+			isValid = true;
+		} else {
+			$this.tooltip({
+				position : 'left',
+				content : 'Введите пароль'
+			});
+			$this.addClass("incorrect");
+
 			isValid = false;
 		}
 	});
@@ -164,12 +123,14 @@ $.fn.tooltip = function(options) {
 	_positionIt($this, body.find('.tooltip').last(), options.position);
 
 
+	
+	
 	$('input,textarea').on('click', function(){
 		$(this).removeClass('incorrect');
 		$('.tooltip').remove();
 
 	});
-
+	
 	$(window).on('resize', function(){
 
 		var

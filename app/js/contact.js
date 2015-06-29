@@ -223,7 +223,7 @@ $.fn.tooltip = function(options) {
 
 		tooltip
 			.offset(positions)
-			.css('opacity', '1');
+			.css('display', 'inline-block');
 	}
 
 
